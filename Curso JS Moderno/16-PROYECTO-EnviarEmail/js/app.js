@@ -99,7 +99,8 @@ function mostrarError(mensaje){
 //Enviar email
 
 function enviarEmail(e) {
-    e.preventDefault();
+    console.log(e.target.value);
+    //e.preventDefault();
    //mostrar spinner
    const spinner = document.querySelector('#spinner');
    spinner.style.display = 'flex';
