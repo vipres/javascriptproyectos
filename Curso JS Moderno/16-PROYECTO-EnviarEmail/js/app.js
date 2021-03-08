@@ -75,7 +75,7 @@ function validarFormulario(e){
     }
 
     if(er.test(email.value) && asunto.value !== '' && mensaje.value !==''){
-        btnEnviar.disabled = true;
+        btnEnviar.disabled = false;
         btnEnviar.classList.remove('cursor-not-allowed', 'opacity-50');
     }
 }
@@ -99,8 +99,8 @@ function mostrarError(mensaje){
 //Enviar email
 
 function enviarEmail(e) {
-    console.log(e.target.value);
-    //e.preventDefault();
+    //console.log(e.target.value);
+    e.preventDefault();
    //mostrar spinner
    const spinner = document.querySelector('#spinner');
    spinner.style.display = 'flex';
